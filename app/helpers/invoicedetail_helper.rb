@@ -1,0 +1,2 @@
+module InvoicedetailHelper
+end
