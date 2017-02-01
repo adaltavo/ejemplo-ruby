@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user/index'
+
+  get 'invoice/index'
+
   get 'invoicedetail/index'
 
   get 'item/index'
