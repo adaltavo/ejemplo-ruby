@@ -1,5 +1,6 @@
 class ItemController < ApplicationController
-  require 'spreadsheet';
+  require 'roo';
+
   def index
   	var = "{'huehue':'huehue'}";
   	render json: var;
@@ -11,8 +12,13 @@ class ItemController < ApplicationController
   	File.open(Rails.root.join('public', 'uploads', uploaded.original_filename), 'wb') do |file|
   	    file.write(uploaded.read)
   	end
-  	book = Spreadsheet.open Rails.root.join('public', 'uploads', uploaded.original_filename);
+  	#book = Spreadsheet.open Rails.root.join('public', 'uploads', uploaded.original_filename);
+    xlsx = Roo::Spreadsheet.open('./public/uploads/'+uploaded.original_filename);
+
   	render inline: "subido";
+
+    
+    
   end
 
   def new
