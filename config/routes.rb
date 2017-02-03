@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'user/index'
 
-  resources :users
+  resources :user
 
   get 'invoice/index'
 
