@@ -9,6 +9,12 @@ Rails.application.routes.draw do
 
   get 'item/index'
 
+  get 'item/new'
+
+  post 'item/cargaexcel' => 'item#cargaexcel'
+
+
+
 #GET	/photos	photos#index	display a list of all photos
 #GET	/photos/new	photos#new	return an HTML form for creating a new photo
 #POST	/photos	photos#create	create a new photo
