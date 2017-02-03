@@ -1,0 +1,24 @@
+<%= form_for :post do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </p>
+
+  <p>
+    <%= f.label :correo %><br>
+    <%= f.text_field :correo %>
+  </p>
+
+  <p>
+    <%= f.label :rfc %><br>
+    <%= f.text_field :rfc %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
