@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   post 'item/cargaexcel' => 'item#cargaexcel'
 
+  match 'venta' => 'invoice#venta', via: [:get, :post]
+
 
 
 #GET	/photos	photos#index	display a list of all photos
