@@ -11,13 +11,14 @@ class ItemController < ApplicationController
 
 
 	def cargaexcel 
+		ActiveRecord::Base.logger.level = 1
 		uploaded = params[:excel];
 		File.open(Rails.root.join('public', 'uploads', uploaded.original_filename), 'wb') do |file|
 			file.write(uploaded.read)
 		end
   	#book = Spreadsheet.open Rails.root.join('public', 'uploads', uploaded.original_filename);
 
-  	path= Rails.root.join('public', 'uploads', uploaded.original_filename);
+  	#path= Rails.root.join('public', 'uploads', uploaded.original_filename);
   	ItemImporter.import('./public/uploads/'+uploaded.original_filename);
   	#xlsx = Roo::Spreadsheet.open('./public/uploads/'+uploaded.original_filename);
   	render inline: "subido";
