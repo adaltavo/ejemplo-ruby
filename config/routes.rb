@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get 'user/index'
 
   resources :user
+  post 'user/new' => 'user#new'
+  
+  post 'user/insertar' => 'user#insertar'
 
   get 'custom/route' => 'user#index'
 

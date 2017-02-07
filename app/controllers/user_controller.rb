@@ -8,4 +8,7 @@ class UserController < ApplicationController
   end
   def delete
   end
+  def insertar
+
+  end
 end
