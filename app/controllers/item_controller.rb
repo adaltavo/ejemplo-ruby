@@ -9,6 +9,10 @@ class ItemController < ApplicationController
 		render json: var;
 	end
 
+	def all
+		render json: ItemProduct.all().to_json(:except => [:created_at, :updated_at])
+	end
+
 
 	def cargaexcel 
 		ActiveRecord::Base.logger.level = 1

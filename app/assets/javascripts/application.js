@@ -14,5 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= requiere bootstrap/dist/js/bootstrap.min
+//= require bootstrap/dist/js/bootstrap.min
+//= require mymodule/dist/inline.bundle
+//= require mymodule/dist/polyfills.bundle
+//= require mymodule/dist/styles.bundle
+//= require mymodule/dist/vendor.bundle
+//= require mymodule/dist/main.bundle
 
