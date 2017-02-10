@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>EjemploRuby</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>EjemploRuby</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-   
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 
-  <body>
-  <app-toolbar>loading toolbar...</app-toolbar>
-    <%= yield %>
-  </body>
+</head>
 
-   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<body>
+<app-root></app-root>
+  <%= yield %>
+</body>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 </html>

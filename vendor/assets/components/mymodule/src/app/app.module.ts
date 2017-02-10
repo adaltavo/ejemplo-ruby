@@ -20,7 +20,7 @@ import 'hammerjs';
     MaterialModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent, ToolbarComponent]
+  bootstrap: [AppComponent]
   //schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
