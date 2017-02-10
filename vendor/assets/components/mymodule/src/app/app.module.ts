@@ -8,7 +8,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import 'hammerjs';
 import { FormuserComponent } from './formuser/formuser.component';
 import { UploadexcelComponent } from './uploadexcel/uploadexcel.component';
-
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import { UploadexcelComponent } from './uploadexcel/uploadexcel.component';
     ToolbarComponent,
     FormuserComponent,
     UploadexcelComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,4 +15,12 @@ export class ToolbarComponent implements OnInit {
 
   }
 
+  saludar(){
+  	alert("hola desde angular");
+  }
+
+  goto(url: string){
+  	window.location.replace(url);
+  }
+
 }

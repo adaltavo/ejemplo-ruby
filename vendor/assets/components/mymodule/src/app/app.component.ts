@@ -29,14 +29,14 @@ export class AppComponent {
 	{id:1,name:"cargando items",sku:"2",purchprice:3,saleprice:3,shortdes:"sws",longdes:"2w2w",stock:32},
 		];
 	errorMessage;
-
+/*
 	constructor(private itemService: ItemService){
 		this.itemService.getItems().subscribe( 
 			(items) =>{this.items = items; console.log(this.items);} ,
 			error =>  this.errorMessage = <any>error);
 		console.log(this.items);
 	}
-
+*/
 
 
 }
