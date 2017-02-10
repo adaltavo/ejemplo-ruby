@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  get 'site/index'
+
   get 'user/index'
 
+  get '/' => 'site#index'
+  
   resources :user
   post 'user/new' => 'user#new'
   
