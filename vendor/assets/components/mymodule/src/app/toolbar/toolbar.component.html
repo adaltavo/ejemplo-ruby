@@ -6,7 +6,7 @@
   <button md-icon-button routerLink="index" title="inicio" routerLinkActive="active">
     <md-icon>home</md-icon>
   </button>
-  <button md-icon-button title="vender">
+  <button md-icon-button title="vender" routerLink="item/sell" routerLinkActive="active">
     <md-icon>monetization_on</md-icon>
   </button>
   <button md-icon-button (click)="saludar()" title="movimientos">
@@ -33,4 +33,7 @@
       </button>
     </md-menu>
 </md-toolbar>
-<router-outlet></router-outlet>
+<div class="flex-container" fxLayout="row" fxLayoutAlign="center center">
+  <router-outlet></router-outlet>
+</div>
+
