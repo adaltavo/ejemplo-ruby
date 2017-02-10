@@ -23,13 +23,13 @@
         <md-icon>fingerprint</md-icon>
         <span>Login</span>
       </button>
-      <button md-menu-item disabled>
-        <md-icon>announcement</md-icon>
-        <span>Issues</span>
+      <button md-menu-item  (click)="goto('/item/new')">
+        <md-icon>description</md-icon>
+        <span>Carga items</span>
       </button>
-      <button md-menu-item>
-        <md-icon>notifications_off</md-icon>
-        <span>Disable alerts</span>
+      <button md-menu-item (click)="goto('/user/new')">
+        <md-icon>accessibility</md-icon>
+        <span>Agregar usuario</span>
       </button>
     </md-menu>
 </md-toolbar>
