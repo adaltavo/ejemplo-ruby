@@ -1,0 +1,15 @@
+.titulouser {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.botonenviar {
+    color:rebeccapurple;
+    background-color: lightgrey;
+}
+.example-card {
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+}
+.input-size{
+    width: 100%;
+}

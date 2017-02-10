@@ -6,12 +6,16 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import 'hammerjs';
+import { FormuserComponent } from './formuser/formuser.component';
+import { UploadexcelComponent } from './uploadexcel/uploadexcel.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
+    FormuserComponent,
+    UploadexcelComponent,
   ],
   imports: [
     BrowserModule,
