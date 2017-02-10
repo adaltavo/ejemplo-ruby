@@ -3,10 +3,10 @@
   <span class="spacer"></span>
     <span>Bienvenido, usuario</span>
   <span class="spacer"></span>
-  <button md-icon-button (click)="goto('/')" title="inicio">
+  <button md-icon-button routerLink="index" title="inicio" routerLinkActive="active">
     <md-icon>home</md-icon>
   </button>
-  <button md-icon-button (click)="goto('/venta')" title="vender">
+  <button md-icon-button title="vender">
     <md-icon>monetization_on</md-icon>
   </button>
   <button md-icon-button (click)="saludar()" title="movimientos">
@@ -23,13 +23,14 @@
         <md-icon>fingerprint</md-icon>
         <span>Login</span>
       </button>
-      <button md-menu-item  (click)="goto('/item/new')">
+      <button md-menu-item routerLink="/item/upload" routerLinkActive="active">
         <md-icon>description</md-icon>
         <span>Carga items</span>
       </button>
-      <button md-menu-item (click)="goto('/user/new')">
+      <button md-menu-item routerLink="/user/new" routerLinkActive="active">
         <md-icon>accessibility</md-icon>
         <span>Agregar usuario</span>
       </button>
     </md-menu>
 </md-toolbar>
+<router-outlet></router-outlet>

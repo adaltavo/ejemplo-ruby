@@ -9,6 +9,10 @@ import 'hammerjs';
 import { FormuserComponent } from './formuser/formuser.component';
 import { UploadexcelComponent } from './uploadexcel/uploadexcel.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { RouterModule }   from '@angular/router';
+import { HomeComponent } from './home/home.component';
+
+import { MyrouterModule } from './myrouter/myrouter.module';
 
 @NgModule({
   declarations: [
@@ -17,11 +21,13 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     FormuserComponent,
     UploadexcelComponent,
     SidenavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    MyrouterModule,
     MaterialModule.forRoot()
   ],
   providers: [],
