@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'user/index'
 
+  get '/index' => 'site#index'
+
   get '/' => 'site#index'
   
   resources :user

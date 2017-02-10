@@ -31,7 +31,7 @@ import { MyrouterModule } from './myrouter/myrouter.module';
     MaterialModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [SidenavComponent]
   //schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
