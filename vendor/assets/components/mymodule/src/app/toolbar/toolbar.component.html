@@ -1,7 +1,7 @@
 <md-toolbar color="primary">
   <span>Punto de venta SINNEG</span>
   <span class="spacer"></span>
-    <span>Bienvenido, usuario</span>
+  <span>Bienvenido, usuario</span>
   <span class="spacer"></span>
   <button md-icon-button routerLink="index" title="inicio" routerLinkActive="active">
     <md-icon>home</md-icon>
@@ -12,28 +12,30 @@
   <button md-icon-button (click)="saludar()" title="movimientos">
     <md-icon>account_balance</md-icon>
   </button>
-   <button md-icon-button (click)="saludar()" title="configuraciones">
+  <button md-icon-button (click)="saludar()" title="configuraciones">
     <md-icon>build</md-icon>
   </button>
   <button md-icon-button [mdMenuTriggerFor]="menu">
     <md-icon>more_vert</md-icon>
   </button>
-   <md-menu #menu="mdMenu">
-      <button md-menu-item>
-        <md-icon>fingerprint</md-icon>
-        <span>Login</span>
-      </button>
-      <button md-menu-item routerLink="/item/upload" routerLinkActive="active">
-        <md-icon>description</md-icon>
-        <span>Carga items</span>
-      </button>
-      <button md-menu-item routerLink="/user/new" routerLinkActive="active">
-        <md-icon>accessibility</md-icon>
-        <span>Agregar usuario</span>
-      </button>
-    </md-menu>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item>
+      <md-icon>fingerprint</md-icon>
+      <span>Login</span>
+    </button>
+    <button md-menu-item routerLink="/item/upload" routerLinkActive="active">
+      <md-icon>description</md-icon>
+      <span>Carga items</span>
+    </button>
+    <button md-menu-item routerLink="/user/new" routerLinkActive="active">
+      <md-icon>accessibility</md-icon>
+      <span>Agregar usuario</span>
+    </button>
+  </md-menu>
 </md-toolbar>
-<div class="flex-container" fxLayout="row" fxLayoutAlign="center center">
-  <router-outlet></router-outlet>
+<div class="flex-container" fxLayout="column" fxLayoutGap="100%" fxLayoutWrap="nowrap">
+  <div fxLayout="row" class="container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
