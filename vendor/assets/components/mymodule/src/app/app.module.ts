@@ -11,8 +11,10 @@ import { UploadexcelComponent } from './uploadexcel/uploadexcel.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { RouterModule }   from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AlertModule } from 'ng2-bootstrap';
 
 import { MyrouterModule } from './myrouter/myrouter.module';
+import { ItemtableComponent } from './itemtable/itemtable.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,15 @@ import { MyrouterModule } from './myrouter/myrouter.module';
     FormuserComponent,
     UploadexcelComponent,
     SidenavComponent,
-    HomeComponent
+    HomeComponent,
+    ItemtableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MyrouterModule,
+    AlertModule.forRoot(),
     MaterialModule.forRoot()
   ],
   providers: [],

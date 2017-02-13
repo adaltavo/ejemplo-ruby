@@ -11,7 +11,7 @@ export class formuserService{
 
 	constructor (private http: Http) {}
 	sendUserData () {
-		return this.http.get(this.url).map(res => res.json());
+		return this.http.post(this.url,"").map(res => res.json());
 	}
 
 }

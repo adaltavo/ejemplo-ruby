@@ -1,0 +1,39 @@
+<table class="table table-responsive table-hover">
+	<thead class="text-center">
+		<th>nombre</th>
+		<th>cantidad</th>
+		<th>precio</th>
+	</thead>
+	<tbody>
+		<tr *ngFor="let row of rows">
+			<td>
+				<md-input-container name=item class="input-size">
+					<input md-input placeholder="">
+				</md-input-container>
+			</td>
+			<td>
+				<md-input-container name=cantidad class="input-size">
+					<input md-input  type="number">
+				</md-input-container>
+			</td>
+			<td>
+				<md-input-container name=precio class="input-size">
+					<input md-input placeholder="" value="300">
+				</md-input-container>
+			</td>			
+		</tr>
+		<tr >
+			<td colspan="3">
+				<button md-icon-button (click)="addRow()">
+					<md-icon>add_circle_outline</md-icon>
+				</button>
+			</td>
+			<td colspan="3">
+				<button md-icon-button (click)="removeRow()">
+					<md-icon>remove_circle_outline</md-icon>
+				</button>
+			</td>
+		</tr>
+	</tbody>
+
+</table>

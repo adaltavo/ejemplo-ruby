@@ -14,3 +14,8 @@
  *= require_self
  *= require bootstrap/dist/css/bootstrap
  */
+ html, body, .viewport {
+ 	width: 100%;
+ 	height: 100%;
+ 	margin: 0;
+ }

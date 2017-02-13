@@ -6,12 +6,14 @@ import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { HomeComponent } from '../home/home.component';
 import { FormuserComponent } from '../formuser/formuser.component';
 import { UploadexcelComponent } from '../uploadexcel/uploadexcel.component';
+import { ItemtableComponent } from '../itemtable/itemtable.component';
 
 const routes: Routes =[
 	{path:'index', component: HomeComponent},
 	{path:'', redirectTo: 'index', pathMatch: 'full'},
 	{path:'item/upload', component: UploadexcelComponent},
 	{path:'user/new', component: FormuserComponent},
+  {path:'item/sell', component: ItemtableComponent},
 ];
 
 @NgModule({
