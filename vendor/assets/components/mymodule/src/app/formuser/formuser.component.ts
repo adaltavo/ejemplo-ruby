@@ -15,9 +15,9 @@ export class FormuserComponent {
 	}
   onSubmit(value: any){
     //console.log(value);
-    this._formuserService.sendUserData()
+    this._formuserService.sendUserData(value)
     .subscribe(
-      data => this.getData=JSON.stringify(data),
+      (data) =>{ this.getData=JSON.stringify(data);},
       error => alert(error),
       () => console.log("finished")
     );

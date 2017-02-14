@@ -12,12 +12,9 @@ class UserController < ApplicationController
                     correo:params[:correo],
                     rfc:params[:rfc]);
     if @user.save
-      render :json=> @user
-      redirect_to root_url
+      render json: @product
     else
-      #render :action => 'new'
-      
-      render :action => 'new'
+      render json: {error:'error'}
     end
   end
   def update
