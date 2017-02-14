@@ -1,4 +1,5 @@
 class UserController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
 
   end
@@ -6,11 +7,18 @@ class UserController < ApplicationController
     @user=User.new
   end
   def create
-    @user=User.create(name:params[:user][:name],
-                    password:params[:user][:password],
-                    correo:params[:user][:correo],
-                    rfc:params[:user][:rfc]);
-
+    @user=User.new(name:params[:name],#create
+                    password:params[:password],
+                    correo:params[:correo],
+                    rfc:params[:rfc]);
+    if @user.save
+      render :json=> @user
+      redirect_to root_url
+    else
+      #render :action => 'new'
+      
+      render :action => 'new'
+    end
   end
   def update
   end

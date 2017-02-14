@@ -1,24 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { formuserService } from './app.formuser.service'
-import { FormsModule } from '@angular/forms';
+
+
 @Component({
   selector: 'app-formuser',
   templateUrl: './formuser.component.html',
-  styleUrls: ['./formuser.component.css']
+  styleUrls: ['./formuser.component.css'],
+  providers: [formuserService]
 })
 
-
-export class FormuserComponent implements OnInit {
-
-
-  constructor() {
-
-  }
-
-  ngOnInit() {
-  }
+export class FormuserComponent {
+  getData:String;
+  	constructor(private _formuserService:formuserService){
+	}
   onSubmit(value: any){
-    console.log(value);
+    //console.log(value);
+    this._formuserService.sendUserData()
+    .subscribe(
+      data => this.getData=JSON.stringify(data),
+      error => alert(error),
+      () => console.log("finished")
+    );
   }
 
 }

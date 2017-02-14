@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get '/index' => 'site#index'
 
   get '/' => 'site#index'
-  
-  resources :user
   post 'user/new' => 'user#new'
+  
+  post 'user/create' => 'user#create'
   
   post 'user/insertar' => 'user#insertar'
 
