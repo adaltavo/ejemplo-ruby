@@ -15,6 +15,10 @@ import { AlertModule } from 'ng2-bootstrap';
 
 import { MyrouterModule } from './myrouter/myrouter.module';
 import { ItemtableComponent } from './itemtable/itemtable.component';
+import { SellComponent } from './sell/sell.component';
+import { Select2userComponent } from './select2user/select2user.component';
+import { Select2Module } from 'ng2-select2';
+import { Select2itemComponent } from './select2item/select2item.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { ItemtableComponent } from './itemtable/itemtable.component';
     UploadexcelComponent,
     SidenavComponent,
     HomeComponent,
-    ItemtableComponent
+    ItemtableComponent,
+    SellComponent,
+    Select2userComponent,
+    Select2itemComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,8 @@ import { ItemtableComponent } from './itemtable/itemtable.component';
     HttpModule,
     MyrouterModule,
     AlertModule.forRoot(),
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    Select2Module
   ],
   providers: [],
   bootstrap: [SidenavComponent]

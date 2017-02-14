@@ -20,4 +20,5 @@
 //= require mymodule/dist/styles.bundle
 //= require mymodule/dist/vendor.bundle
 //= require mymodule/dist/main.bundle
+//= require select2.full.min
 
