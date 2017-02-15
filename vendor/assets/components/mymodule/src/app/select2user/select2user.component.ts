@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select2user.component.css']
 })
 export class Select2userComponent implements OnInit {
-
+	selected: string;
   constructor() { }
 
   ngOnInit() {

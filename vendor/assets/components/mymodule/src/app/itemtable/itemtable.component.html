@@ -5,12 +5,17 @@
 			<th>precio</th>
 		</thead>
 		<tbody>
-			<tr *ngFor="let row of rows;" >
+			<tr *ngFor="let row of rows; let i = index;" >
+				<td>
+				<app-select2item (selectedItem)="itemEventHandler($event,i)"></app-select2item>
+				</td>
+				<!--
 				<td>
 					<md-input-container name=item class="input-size">
 						<input md-input placeholder="" [(ngModel)]="row.item" name="item">
 					</md-input-container>
 				</td>
+				-->
 				<td>
 					<md-input-container name=cantidad class="input-size">
 						<input md-input  type="number" [(ngModel)]="row.quantity" name="quantity">

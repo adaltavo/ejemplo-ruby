@@ -15,6 +15,9 @@ export class ItemService{
 		//.map(this.extractData)
 		//.catch(this.handleError);
 	}
+	getItem (id){
+		return this.http.get("/item/"+id).map(res => res.json());
+	}
 /*
 	private extractData(res: Response) {
 		let body = res.json();
