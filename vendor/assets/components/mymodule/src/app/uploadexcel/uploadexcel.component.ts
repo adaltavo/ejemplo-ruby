@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { uploadexcelService } from './app.uploadexcel.service'
 @Component({
   selector: 'app-uploadexcel',
@@ -10,14 +10,20 @@ export class UploadexcelComponent{
 getData:String;
   constructor(private _uploadexcelservice:uploadexcelService) {
    }
-    onSubmit(){
-    //console.log(value);
-    /*this._uploadexcelservice.sendUserData(value)
-    .subscribe(
-      (data) =>{ this.getData=JSON.stringify(data);},
-      error => alert(error),
-      () => console.log("finished")
-    );*/
+
+   @ViewChild("fileInput") fileInput;
+
+
+    onSubmit():void{
+    let fi = this.fileInput.nativeElement;
+    if (fi.files && fi.files[0]) {
+        let fileToUpload = fi.files[0];
+        this._uploadexcelservice
+            .upload(fileToUpload)
+            .subscribe(res => {
+                console.log(res);
+            });
+    }
     console.log("entro");
   }
 

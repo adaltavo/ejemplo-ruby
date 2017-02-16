@@ -1,7 +1,4 @@
-.alinearcentro{
-    text-align: center;
-    align-content: center;
-}
+
 .botonenviar {
     color:rebeccapurple;
     background-color: lightgrey;
@@ -9,13 +6,13 @@
 .example-card {
   text-align: center;
 }
+.contenedor{
+   margin-left: 600px;
+}
 .input-size{
-    width: 100%;
+    width: 40%;
 }
 .titulo1{
     font-family: 'Pathway Gothic One', sans-serif;
     text-align: center;  
-}
-input[type=file] {
-    margin: 0 auto;
 }

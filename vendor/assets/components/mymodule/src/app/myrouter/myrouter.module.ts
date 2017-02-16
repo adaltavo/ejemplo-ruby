@@ -7,6 +7,7 @@ import { HomeComponent } from '../home/home.component';
 import { FormuserComponent } from '../formuser/formuser.component';
 import { UploadexcelComponent } from '../uploadexcel/uploadexcel.component';
 import { SellComponent } from '../sell/sell.component';
+import { LoginComponent } from '../login/login.component';
 
 const routes: Routes =[
 	{path:'index', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes =[
 	{path:'item/upload', component: UploadexcelComponent},
 	{path:'user/new', component: FormuserComponent},
   {path:'item/sell', component: SellComponent},
+  {path:'login', component: LoginComponent}
 ];
 
 @NgModule({

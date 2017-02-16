@@ -1,5 +1,5 @@
 class ItemController < ApplicationController
-
+  skip_before_action :verify_authenticity_token
 	require 'spreadsheet';
 	require 'ItemImporter';
 	require 'roo';
@@ -15,15 +15,17 @@ class ItemController < ApplicationController
 
 
 	def cargaexcel 
+		
 		ActiveRecord::Base.logger.level = 1
 		uploaded = params[:excel];
-		File.open(Rails.root.join('public', 'uploads', uploaded.original_filename), 'wb') do |file|
+		temp=uploaded.original_filename
+		File.open(Rails.root.join('public', 'uploads',temp), 'wb') do |file|
 			file.write(uploaded.read)
 		end
   	#book = Spreadsheet.open Rails.root.join('public', 'uploads', uploaded.original_filename);
 
   	#path= Rails.root.join('public', 'uploads', uploaded.original_filename);
-  	ItemImporter.import('./public/uploads/'+uploaded.original_filename);
+  	ItemImporter.import('./public/uploads/'+temp);
   	#xlsx = Roo::Spreadsheet.open('./public/uploads/'+uploaded.original_filename);
   	render inline: "subido";
 

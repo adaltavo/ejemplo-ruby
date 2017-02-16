@@ -19,6 +19,7 @@ import { SellComponent } from './sell/sell.component';
 import { Select2userComponent } from './select2user/select2user.component';
 import { Select2Module } from 'ng2-select2';
 import { Select2itemComponent } from './select2item/select2item.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { Select2itemComponent } from './select2item/select2item.component';
     ItemtableComponent,
     SellComponent,
     Select2userComponent,
-    Select2itemComponent
+    Select2itemComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

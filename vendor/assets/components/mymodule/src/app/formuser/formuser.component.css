@@ -1,20 +1,22 @@
-.titulouser {
-   font-family: Verdana, Arial, Helvetica, sans-serif;
-}
+
 .botonenviar {
     color:rebeccapurple;
     background-color: lightgrey;
 }
 .example-card {
   text-align: center;
-  padding: 40px;
-  margin: 20px;
-  width: 800px;
-
 }
 .contenedor{
    margin-left: 400px;
 }
 .input-size{
-    width: 100%;
+    width: 60%;
+    padding-bottom: 1%;
+}
+.titulo1{
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;  
+}
+.algo{
+  padding:40px;
 }

@@ -1,0 +1,26 @@
+
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+  <div class="text-center" >
+    <md-card  align="center">
+
+      <h1 class="titulo1">Iniciar Sesión</h1>
+      <br>
+      <div >
+        <md-input-container name=nombre class="input-size">
+          <input md-input placeholder="Nombre" name="name" ngModel>
+        </md-input-container>
+      </div>
+      <br>
+      <div>
+        <md-input-container name=password class="input-size">
+          <input md-input placeholder="Password" type="password" name="password" ngModel>
+        </md-input-container>
+      </div>
+      <br>
+      <div>
+        <button md-raised-button class="botonenviar" type="submit">Enviar</button>
+      </div>
+
+    </md-card>
+  </div>
+</form>
