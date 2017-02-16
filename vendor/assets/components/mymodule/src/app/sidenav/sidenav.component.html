@@ -1,29 +1,30 @@
 <md-sidenav-container style="height:100%; min-height: 100%;">
   <md-sidenav #start (open)="closeStartButton.focus()">
-    Start Sidenav.
-    <br>
-    <button md-button #closeStartButton (click)="start.close()">Close</button>
+    <div class="sidederecha">
+      <br>
+      <h1 class="titulo1">Administrador</h1>
+      <br>
+      <div class="col-md-10 col-md-offset-1" align="center">
+        <img class="imagentam" src="http://semesmadrid.es/wp-content/uploads/circulo-azul.png">
+      </div>
+      <br>
+      <div class=textodiv>
+        <p class="textosideder">Nombre: Juan Perez</p>
+        <p class="textosideder">Cargo: Administrador</p>
+        <p class="textosideder"><a href="">Configuración</a></p>
+      </div>
+      <button class="botonenviar" md-button #closeStartButton (click)="start.close()">Close</button>
+
+    </div>
   </md-sidenav>
   <md-sidenav #end align="end">
-    End Sidenav.
-    <button md-button (click)="end.close()">Close</button>
-    End Sidenav.
-    <button md-button (click)="end.close()">Close</button>
-    End Sidenav.
-    <button md-button (click)="end.close()">Close</button>
-    End Sidenav.
-    <button md-button (click)="end.close()">Close</button>
-    End Sidenav.
-    <button md-button (click)="end.close()">Close</button>
-    End Sidenav.
-    <button md-button (click)="end.close()">Close</button>
-    End Sidenav.
+    <
     <button md-button (click)="end.close()">Close</button>
   </md-sidenav>
   <div style="height:90%;">
     <app-toolbar></app-toolbar>
   </div>
-   <!--<alert type="success">hello</alert>-->
-   <button md-button (click)="start.open()">Open start sidenav</button>
-   <button md-button (click)="end.open()">Open end sidenav</button>
+  <!--<alert type="success">hello</alert>-->
+  <button md-button (click)="start.open()">Open start sidenav</button>
+  <button md-button (click)="end.open()">Open end sidenav</button>
 </md-sidenav-container>

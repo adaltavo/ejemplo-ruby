@@ -1,0 +1,30 @@
+.titulo1{
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;  
+}
+.imagentam{
+    width: 50%;
+    height: 50%;
+   
+}
+.botonenviar {
+    color:rebeccapurple;
+    background-color: lightgrey;
+    vertical-align: bottom;
+    position:absolute;
+    bottom:5px;
+    right:10px;
+}
+.sidederecha{
+    text-align: center;
+    background-color: lightyellow;
+    width: 100%;
+    height: 100%;
+}
+.textosideder{
+    font-size: 1.5em;
+    margin: 3%;
+}
+.textodiv{
+    margin: 10px;
+}
