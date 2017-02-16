@@ -1,23 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { InvoiceService } from '../invoice.service'; 
+import { ItemService } from '../app.item.service'
+
 
 @Component({
   selector: 'app-itemtable',
   templateUrl: './itemtable.component.html',
   styleUrls: ['./itemtable.component.css'],
-  providers: [InvoiceService]
+  providers: [InvoiceService, ItemService]
 })
 export class ItemtableComponent implements OnInit {
 
   submitted = false;
 	private rows;
   private invoice;
-  constructor(private invoiceService: InvoiceService) { 
+  constructor(private invoiceService: InvoiceService, private itemService: ItemService) { 
 
   }
 
   ngOnInit() {
-  	this.rows=[{item:"",quantity:0,unitprice:0}];
+  	this.rows=[{item:"",quantity:1,unitprice:0}];
     this.invoice={user_id:0,date:Date.now(),number:"avc123", amount:1234};
   }
 
@@ -37,6 +39,20 @@ export class ItemtableComponent implements OnInit {
 
       );
 
+  }
+
+  public itemEventHandler(item,index){
+    console.log(item);
+    console.log(index);
+    this.itemService.getItem(item).subscribe(
+      (msg)=>{
+        this.rows[index].item=msg.id;
+        this.rows[index].unitprice=msg.saleprice;
+      },
+      (err)=>{
+        console.log(err);
+      }
+    );
   }
 
   onSubmit(){

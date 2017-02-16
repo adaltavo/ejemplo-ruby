@@ -22,6 +22,10 @@ Rails.application.routes.draw do
 
   get 'item/all'
 
+  get 'item/ajax'
+
+  get 'item/:id' => 'item#show'
+
   post 'item/cargaexcel' => 'item#cargaexcel'
 
   match 'venta' => 'invoice#venta', via: [:get, :post]

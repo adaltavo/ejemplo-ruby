@@ -35,4 +35,12 @@ class ItemController < ApplicationController
 
   end
 
+  def ajax
+  	render json: ItemProduct.where("sku LIKE ?", "%#{params[:sku]}%")
+  end
+
+  def show
+  	render json: ItemProduct.find(params[:id].to_i).to_json(:except => [:created_at, :updated_at])
+  end
+
 end
