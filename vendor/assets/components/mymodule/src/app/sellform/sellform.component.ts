@@ -15,10 +15,10 @@ export class SellformComponent implements OnInit {
   }
 
   public eventItemHandler(item){
-  	this.newItem.emit();
+  	this.newItem.emit(item);
   }
-   public eventUserHandler(item){
-  	this.newUser.emit();
+   public eventUserHandler(user){
+  	this.newUser.emit(user);
   }
 
 }

@@ -1,14 +1,19 @@
+<app-sellform (newItem)="setNewItem($event)" (newUser)="setNewUser($event)"></app-sellform>
+<br>
 	<table class="table table-responsive table-hover">
 		<thead class="text-center">
-			<th>Nombre</th>
+			<th colspan="2">Nombre</th>
 			<th>Cantidad</th>
 			<th>Precio</th>
-			<th>Subtotal</th>
+			<th colspan="2">Subtotal</th>
 		</thead>
 		<tbody>
 			<tr *ngFor="let row of rows; let i = index;" >
 				<td>
-				<app-select2item (selectedItem)="itemEventHandler($event,i)"></app-select2item>
+				<app-select2item (selectedItem)="itemEventHandler($event,i)" ></app-select2item>
+				</td>
+				<td>
+					{{row.item.name}}
 				</td>
 				<!--
 				<td>
@@ -29,7 +34,12 @@
 				</td>	
 				<td>
 					<p>{{row.subtotal}}</p>
-				</td>		
+				</td>	
+				<td>
+					<button md-icon-button (click)="removeRowAt(i)">
+						<md-icon>cancel</md-icon>
+					</button>
+				</td>	
 			</tr>
 			<tr >
 				<td colspan="">
