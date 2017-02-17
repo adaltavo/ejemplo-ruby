@@ -1,1 +1,2 @@
-<select2 [data]="[{id:1,disabled:'true',text:'Seleccione'}]"></select2>
+<select2 [data]="[{id:1,disabled:'true',text:'Seleccione'}]" [options]="select2options" 
+(valueChanged)="currentUser($event)"></select2>

@@ -22,6 +22,9 @@ class UserController < ApplicationController
   def delete
   end
   def insertar
+  end
 
+  def ajax
+    render json: User.where("name LIKE ? or rfc LIKE ?", "%#{params[:user]}%", "%#{params[:user]}%")
   end
 end

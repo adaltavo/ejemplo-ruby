@@ -19,12 +19,12 @@ export class ItemtableComponent implements OnInit {
   }
 
   ngOnInit() {
-  	this.rows=[{item:"",quantity:1,unitprice:0}];
+  	this.rows=[{item:"",quantity:1,unitprice:0, subtotal:0}];
     this.invoice={user_id:0,date:Date.now(),number:"avc123", amount:1234};
   }
 
   addRow(){
-  	this.rows.push({item:"",quantity:0,unitprice:0});
+  	this.rows.push({item:"",quantity:1,unitprice:0, subtotal:0});
   }
   removeRow(){
   	if(this.rows.length!==1){
@@ -48,11 +48,16 @@ export class ItemtableComponent implements OnInit {
       (msg)=>{
         this.rows[index].item=msg.id;
         this.rows[index].unitprice=msg.saleprice;
+        this.setPrice(item,index);
       },
       (err)=>{
         console.log(err);
       }
     );
+  }
+
+  public setPrice(price, index){
+    this.rows[index].subtotal=Number(this.rows[index].unitprice)*Number(this.rows[index].quantity);
   }
 
   onSubmit(){

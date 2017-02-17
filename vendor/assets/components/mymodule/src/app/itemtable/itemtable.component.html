@@ -1,8 +1,9 @@
 	<table class="table table-responsive table-hover">
 		<thead class="text-center">
-			<th>nombre</th>
-			<th>cantidad</th>
-			<th>precio</th>
+			<th>Nombre</th>
+			<th>Cantidad</th>
+			<th>Precio</th>
+			<th>Subtotal</th>
 		</thead>
 		<tbody>
 			<tr *ngFor="let row of rows; let i = index;" >
@@ -18,14 +19,17 @@
 				-->
 				<td>
 					<md-input-container name=cantidad class="input-size">
-						<input md-input  type="number" [(ngModel)]="row.quantity" name="quantity">
+						<input md-input  type="number" [(ngModel)]="row.quantity" name="quantity" (ngModelChange)="setPrice($event, i)">
 					</md-input-container>
 				</td>
 				<td>
 					<md-input-container name=precio class="input-size">
-						<input md-input placeholder="" value="300" [(ngModel)]="row.unitprice" name="unitprice">
+						<input md-input placeholder="" value="300" [(ngModel)]="row.unitprice" name="unitprice" (ngModelChange)="setPrice($event, i)">
 					</md-input-container>
-				</td>			
+				</td>	
+				<td>
+					<p>{{row.subtotal}}</p>
+				</td>		
 			</tr>
 			<tr >
 				<td colspan="">
@@ -33,7 +37,7 @@
 						<md-icon>add_circle_outline</md-icon>
 					</button>
 				</td>
-				<td>
+				<td colspan="2">
 					<button md-icon-button (click)="onSubmit()">
 						<md-icon>file_upload</md-icon>
 					</button>

@@ -20,6 +20,7 @@ import { Select2userComponent } from './select2user/select2user.component';
 import { Select2Module } from 'ng2-select2';
 import { Select2itemComponent } from './select2item/select2item.component';
 import { LoginComponent } from './login/login.component';
+import { SellformComponent } from './sellform/sellform.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginComponent } from './login/login.component';
     SellComponent,
     Select2userComponent,
     Select2itemComponent,
-    LoginComponent
+    LoginComponent,
+    SellformComponent
   ],
   imports: [
     BrowserModule,

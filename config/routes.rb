@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   
   post 'user/insertar' => 'user#insertar'
 
+  get 'user/ajax' => 'user#ajax'
+
   get 'custom/route' => 'user#index'
 
   get 'invoicedetail/index'
